@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>WordBridge</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>WordBridge</h1>
+				<p>A simple template for translating service<br />
+				Translate whatever you want<a href="http://html5up.net"> Choose one!</a>.</p>
+			</header>
+
+			<div class="container">
+				<h2>Results</h2>
+				<h3>original text</h3>
+		
+				<div class="form-group">
+					<textarea rows="5" cols="15" name="origin_field" class="form-control">{{original_text}}</textarea>
+				</div>
+				<h3>translated text</h3>
+		
+				<div class="form-group">
+					<textarea rows="5" cols="15" name="trans_field" class="form-control">{{translated_text}}</textarea>
+				</div>
+		
+				<h3>Synonyms,Antonyms</h3>
+				<div>
+					<p>{{synonyms}} {{antonyms}}</p>
+				</div>
+
+				</div>
+				
+				<div>
+					<strong>Target language code:</strong> {{ target_language }}
+				</div>
+
+				<div>
+					<a href="https://en.dict.naver.com/thesaurus/#/thesaurus?query={{translated_text}}">유반의어 찾아보러 가기!</a>
+				</div>
+		
+				<div>
+					<a href="{{ url_for('index') }}">Try another one!</a>
+				</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
